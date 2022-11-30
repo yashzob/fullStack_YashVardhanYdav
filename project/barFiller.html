@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<style>
+    body{
+    margin:0;
+    padding: 0;
+    font-family: sans-serif
+    }
+    section{
+        width: 50%;
+        height: 50%;
+        
+    }
+
+    .bigBox{
+        position:absolute;
+        left:50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+        width: 500px;
+        height: 400px;
+        background-color: bisque;
+        border: 3px solid rgb(179, 111, 28);
+        display: flex;
+    }
+    .bigBox .skill{
+        position: relative;
+        flex:1;
+        text-align: center;
+    }
+    .bigBox .skill .graphLine{
+        position: absolute;
+        width: 40px;
+        height: 400px;
+        background: rgba(0, 0, 0, .1);
+        bottom:0;
+        left:50%;
+        transform :translate(-50px);
+        background: cyan;
+        
+       
+    }
+   /* .bigBox .skill .graphLine:before
+    {
+        content:'';
+        position:absolute;
+        top: 2px;
+        left: 2px;
+        right: 2px;
+        bottom:8px;
+        background-color: yellowgreen ;
+    }
+    
+    .bigBox .skill .graphLine:after
+    {
+        content:'';
+        position:absolute;
+        left: 0;
+        top:0;
+        width:40px;
+        height:30%;
+       
+    }
+*/
+    .bigBox .skill .graphLine .percentage
+    {
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        color: blueviolet;
+        font-weight: bold;
+    }
+    .bigBox .skill .name{
+        position: absolute;
+        bottom: -30px;
+    }
+    #bar1 .graphLine {
+    animation-name: bar2filler;
+    animation-duration: 3s;
+    background-color: yellowgreen ;
+  }
+
+  @keyframes bar1filler {
+    0% {
+      height: 30%;
+    }
+    100%{
+      height: 70%;
+    }
+  }
+
+  @keyframes bar2filler {
+    0% {
+      height: 20%;
+    }
+    100%{
+      height: 80%;
+    }
+  }
+</style>
+    <title>Document</title>
+</head>
+
+<body>
+   <center> <section>
+        <div class="bigBox">
+            <div class="skill">
+                <div class="graphLine" style="height: 30%">
+                    <div class="percentage">30%</div>
+
+                </div>
+                <div class="name"></div>
+
+            </div>
+        
+        
+            <div class="skill">
+                <div class="graphLine" style="height: 40%">
+                    <div class="percentage">40%</div>
+
+                </div>
+                <div class="name"></div>
+
+            </div>
+      
+        
+            <div class="skill">
+                <div class="graphLine" style="height: 80%">
+                    <div class="percentage">80%</div>
+
+                </div>
+                <div class="name"></div>
+
+            </div>
+            
+        </div>
+      
+    </section>
+</body>
+
+</html>
